@@ -18,7 +18,7 @@ VALUES ('market-service', 'dev', 'master', 'spring.datasource.url',
 INSERT INTO ms_properties (application, profile, label, key, value)
 VALUES ('market-service', 'dev', 'master', 'spring.datasource.username', 'postgres');
 INSERT INTO ms_properties (application, profile, label, key, value)
-VALUES ('market-service', 'dev', 'master', 'spring.datasource.password', '123456');
+VALUES ('market-service', 'dev', 'master', 'spring.datasource.password', '2110');
 INSERT INTO ms_properties (application, profile, label, key, value)
 VALUES ('market-service', 'dev', 'master', 'spring.datasource.hikari.schema', 'mhmarket');
 
