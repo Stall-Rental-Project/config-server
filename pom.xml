@@ -40,11 +40,14 @@
             <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
     </dependencies>
-
+    
     <repositories>
         <repository>
             <id>mvn-repo</id>
-            <url>https://github.com/ngohoang211020/market-common/raw/mvn-repo/</url>
+            <url>https://rawgit.com/ngohoang211020/market-common/master</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
             <snapshots>
                 <enabled>true</enabled>
                 <updatePolicy>always</updatePolicy>
