@@ -40,7 +40,7 @@
             <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
     </dependencies>
-    
+
     <repositories>
         <repository>
             <id>mvn-repo</id>
