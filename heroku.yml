@@ -1,3 +1,5 @@
 build:
   docker:
-    web: /cxf-spring-boot-starter-samples/cxf-boot-simple/Dockerfile
+    web: Dockerfile
+run:
+  web: bundle exec puma -C config/puma.rb
