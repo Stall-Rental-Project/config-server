@@ -63,28 +63,4 @@
             </plugin>
         </plugins>
     </build>
-
-    <profiles>
-        <profile>
-            <id>local</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <properties>
-                <activatedProperties>local</activatedProperties>
-            </properties>
-        </profile>
-        <profile>
-            <id>dev</id>
-            <properties>
-                <activatedProperties>dev</activatedProperties>
-            </properties>
-        </profile>
-        <profile>
-            <id>server</id>
-            <properties>
-                <activatedProperties>server</activatedProperties>
-            </properties>
-        </profile>
-    </profiles>
 </project>

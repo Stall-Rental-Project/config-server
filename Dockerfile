@@ -7,5 +7,5 @@ COPY /target/config-server.jar config-server.jar
 
 EXPOSE 8888
 
-ENTRYPOINT ["java", "-Dspring.profiles.active=dev,jdbc","-jar", "config-server.jar"]
+ENTRYPOINT ["java", "-Dspring.profiles.active=jdbc","-jar", "config-server.jar"]
 
