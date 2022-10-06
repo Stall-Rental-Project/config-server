@@ -9,8 +9,8 @@ services:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://103.162.20.141:5432/mhmarketconfig
       - SPRING_DATASOURCE_USERNAME=postgres
       - SPRING_DATASOURCE_PASSWORD=123456
-      - eureka.client.service-url.defaultZone=https://103.162.20.141:8761/eureka/
-      - spring.datasource.hikari.schema=mhmarket
+      - SPRING_DATASOURCE_HIRAKI_SCHEMA=mhmarket
+      - EUREKA_CLIENT_SERVICE-URL_DEFAULTZONE=https://103.162.20.141:8761/eureka/
 
     restart: unless-stopped
     dns:
