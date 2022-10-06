@@ -5,6 +5,10 @@ services:
     container_name: config-server
     ports:
       - "8888:8888"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://103.162.20.141:5432/mhmarketconfig
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=123456
     restart: unless-stopped
     dns:
       - 192.168.200.4
