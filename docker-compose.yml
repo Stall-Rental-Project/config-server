@@ -18,4 +18,4 @@ services:
       - 8.8.8.8
 networks:
   mhmarket-config-dev:
-    driver: bridge
+    driver: mhnetwork
