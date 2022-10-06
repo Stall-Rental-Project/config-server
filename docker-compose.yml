@@ -3,11 +3,9 @@ services:
   config-server-dev:
     image: mhmarket/config:latest
     container_name: config-server
-    environment:
-      PORT: 8888
     ports:
-      - "8888"
-    network_mode: host
+      - "8888:8888"
+    restart: unless-stopped
     dns:
       - 192.168.200.4
       - 8.8.8.8
