@@ -9,33 +9,26 @@ WHERE application = 'market-service'
 INSERT INTO ms_properties (application, profile, label, key, value)
 VALUES ('market-service', 'dev', 'master', 'server.port', '8081');
 INSERT INTO ms_properties (application, profile, label, key, value)
-VALUES ('market-service', 'dev', 'master', 'grpc.server.port', '6566');
+VALUES ('market-service', 'dev', 'master', 'grpc.server.port', '9566');
 
 -- Datasource
 INSERT INTO ms_properties (application, profile, label, key, value)
 VALUES ('market-service', 'dev', 'master', 'spring.datasource.url',
-        'jdbc:postgresql://localhost:5432/marketmarket');
+        'jdbc:postgresql://103.162.20.141:5432/mhmarketmarket');
 INSERT INTO ms_properties (application, profile, label, key, value)
 VALUES ('market-service', 'dev', 'master', 'spring.datasource.username', 'postgres');
 INSERT INTO ms_properties (application, profile, label, key, value)
-VALUES ('market-service', 'dev', 'master', 'spring.datasource.password', '2110');
+VALUES ('market-service', 'dev', 'master', 'spring.datasource.password', '123456');
 INSERT INTO ms_properties (application, profile, label, key, value)
 VALUES ('market-service', 'dev', 'master', 'spring.datasource.hikari.schema', 'mhmarket');
 
 INSERT INTO ms_properties (application, profile, label, key, value)
 VALUES ('market-service', 'dev', 'master', 'spring.jpa.properties.hibernate.default_schema', 'mhmarket');
--- INSERT INTO ms_properties (application, profile, label, key, value)
--- VALUES ('account-service', 'dev', 'master', 'spring.jpa.properties.hibernate.metadata_builder_contributor',
---         'com.banvien.emarket.account.config.QueryDslContributor');
---
--- INSERT INTO ms_properties (application, profile, label, key, value)
--- VALUES ('account-service', 'dev', 'master', 'spring.redis.host', '192.168.200.16');
--- INSERT INTO ms_properties (application, profile, label, key, value)
--- VALUES ('account-service', 'dev', 'master', 'spring.redis.port', '6379');
--- INSERT INTO ms_properties (application, profile, label, key, value)
--- VALUES ('account-service', 'dev', 'master', 'spring.redis.password', '123456');
 --
 INSERT INTO ms_properties (application, profile, label, key, value)
-VALUES ('market-service', 'dev', 'master', 'spring.kafka.bootstrap-servers', 'localhost:9093');
+VALUES ('market-service', 'dev', 'master', 'spring.kafka.bootstrap-servers', '103.162.20.141:9092');
 INSERT INTO ms_properties (application, profile, label, key, value)
 VALUES ('market-service', 'dev', 'master', 'spring.kafka.consumer.group-id', 'market-service-group');
+
+INSERT INTO ms_properties (application, profile, label, key, value)
+VALUES ('market-service', 'dev', 'master', 'eureka.client.serviceUrl.defaultZone', 'http://103.162.20.141:8761/eureka/');
