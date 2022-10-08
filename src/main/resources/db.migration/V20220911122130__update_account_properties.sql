@@ -2,7 +2,8 @@ set search_path to mhmarket;
 
 DELETE
 FROM ms_properties
-WHERE application = 'account-service';
+WHERE application = 'account-service'
+  AND profile = 'dev' ;
 
 -- Port
 INSERT INTO ms_properties (application, profile, label, key, value)
