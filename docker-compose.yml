@@ -11,7 +11,7 @@ services:
       - SPRING_DATASOURCE_PASSWORD=123456
       - SPRING_DATASOURCE_HIRAKI_SCHEMA=mhmarket
       - eureka.client.serviceUrl.defaultZone=http://103.162.20.141:8761/eureka/
-      - eureka.client.instance.preferIpAddress = true
+      - eureka.client.instance.preferIpAddress=true
     networks:
       - mh-network
     restart: unless-stopped
