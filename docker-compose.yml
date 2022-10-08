@@ -12,11 +12,11 @@ services:
       - SPRING_DATASOURCE_HIRAKI_SCHEMA=mhmarket
       - EUREKA_CLIENT_SERVICE-URL_DEFAULTZONE=https://103.162.20.141:8761/eureka/
     networks:
-      - mhmarket-config-dev
+      - mh-network
     restart: unless-stopped
     dns:
       - 192.168.200.4
       - 8.8.8.8
 networks:
-  mhmarket-config-dev:
-    driver: mh-network
+  mh-network:
+    driver: bridge
