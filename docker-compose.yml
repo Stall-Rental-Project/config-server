@@ -10,7 +10,7 @@ services:
       - SPRING_DATASOURCE_USERNAME=postgres
       - SPRING_DATASOURCE_PASSWORD=123456
       - SPRING_DATASOURCE_HIRAKI_SCHEMA=mhmarket
-      - EUREKA_CLIENT_SERVICE-URL_DEFAULTZONE=https://103.162.20.141:8761/eureka/
+      - eureka.client.serviceUrl.defaultZone=http://103.162.20.141:8761/eureka/
     networks:
       - mh-network
     restart: unless-stopped
