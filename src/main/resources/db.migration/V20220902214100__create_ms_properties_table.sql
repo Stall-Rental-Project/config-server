@@ -1,5 +1,4 @@
 set search_path to mhmarket;
-create extension if not exists pgcrypto;
 create sequence ms_properties_propertyid_seq increment 1 minvalue 1;
 
 DROP TABLE IF EXISTS ms_properties;
