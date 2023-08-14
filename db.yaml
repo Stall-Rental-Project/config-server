@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres-service
+  namespace: mhmarket
+spec:
+  selector:
+    app: postgres-service
+  ports:
+    - protocol: TCP
+      port: 5432
+      targetPort: 5432
+---
+apiVersion: v1
+kind: Endpoints
+metadata:
+  name: postgres-service
+  namespace: mhmarket
+subsets:
+  - addresses:
+      - ip: 192.168.150.63
+    ports:
+      - port: 5432

@@ -1,0 +1,54 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloud-config
+  namespace: mhmarket
+spec:
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      app: cloud-config
+  template:
+    metadata:
+      labels:
+        app: cloud-config
+    spec:
+      restartPolicy: Always
+      containers:
+        - name: cloud-config
+          image: 211020/cloud-config:latest
+          imagePullPolicy: Always
+          envFrom:
+            - configMapRef:
+                name: cloud-config
+          ports:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: cloud-config
+  namespace: mhmarket
+spec:
+  type: NodePort
+  selector:
+    app: cloud-config
+  ports:
+    - name: http
+      port: 8080
+      targetPort: 8080
+      nodePort: 32009
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cloud-config
+  namespace: mhmarket
+data:
+  DB_PASS: "123456"
+  DB_SCHEMA: "mhmarket"
+  DB_URL: "jdbc:postgresql://postgres-service:5432/marketconfig"
+  DB_USER: "postgres"

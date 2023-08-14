@@ -5,7 +5,7 @@ WORKDIR /app
 
 COPY /target/config-server.jar config-server.jar
 
-EXPOSE 8888
+EXPOSE 8080
 
-ENTRYPOINT ["java", "-Dspring.profiles.active=jdbc","-jar", "config-server.jar"]
+ENTRYPOINT ["java","-jar", "config-server.jar"]
 

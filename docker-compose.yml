@@ -1,22 +1,20 @@
 version: '3.8'
 services:
   config-server-dev:
-    image: mhmarket/config:latest
+    image: 211020/cloud-config:latest
     container_name: config-server
     ports:
-      - "8888:8888"
+      - "8082:8082"
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://103.162.20.141:5432/mhmarketconfig
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://mh-config.cceyhlcvjfnk.us-east-1.rds.amazonaws.com:5432/mhconfig
       - SPRING_DATASOURCE_USERNAME=postgres
-      - SPRING_DATASOURCE_PASSWORD=123456
-      - SPRING_DATASOURCE_HIRAKI_SCHEMA=mhmarket
-      - eureka.client.serviceUrl.defaultZone=http://103.162.20.141:8761/eureka/
-      - eureka.client.instance.preferIpAddress=true
+      - SPRING_DATASOURCE_PASSWORD=5RQI9yPAExiQUy7gCaXX
+      - SPRING_DATASOURCE_HIKARI_SCHEMA=mhmarket
     networks:
       - mh-network
     restart: unless-stopped
     dns:
-      - 192.168.200.4
+      - 103.162.20.4
       - 8.8.8.8
 networks:
   mh-network:
